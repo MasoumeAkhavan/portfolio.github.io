@@ -1,0 +1,65 @@
+@mixin hero_background () {
+    width: 40%;
+    height: 80%;
+    background-color: $gray_background;
+}
+
+@mixin button () {
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 1.4px;
+    text-transform: capitalize;
+    padding: $spacer*2 $spacer * 3;
+    border: none;
+    border-radius: 40px;
+    margin-top: $spacer * 3;
+    @include gradient;
+    text-shadow: 0px 0px 7px rgba(255,255,255,0.6);
+    transition: 0.2s;
+
+    &:hover {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 0;
+        text-shadow: 0px 0px 7px rgba(255,255,255,0.8);
+    }
+}
+
+@mixin gradient () {
+    background: rgb(17,86,223);
+    background: linear-gradient(45deg, rgba(17,86,223,1) 40%, rgba(18,101,230,1) 63%, rgba(18,114,235,1) 79%);
+}
+
+@mixin section {
+    max-width: 100%;
+    position: relative;
+
+    @media screen and (min-width: 1441px) {
+        max-width: 1440px;
+        margin: 0 auto;
+        max-height: 60vh;
+    }
+}
+
+@mixin before_bg {
+    display: inline-block;
+    width: 40%;
+    position: absolute;
+    text-transform: capitalize;
+    font-size: 16vw;
+    font-family: "Source Code Pro", monospace;
+    position: absolute;
+
+    @media screen and (min-width: 1441px) {
+        font-size: 15vh;
+    }
+}
+
+@mixin hamburger {
+    display: inline-block;
+    width: 100%;
+    height: 3px;
+    background-color: #000;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
